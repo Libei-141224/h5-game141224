@@ -3,7 +3,8 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm config set registry https://registry.npmmirror.com \
-  && (npm ci --include=dev --no-audit --no-fund || (rm -rf node_modules && npm install --no-audit --no-fund)) \
+  && (npm ci --include=dev --no-audit --no-fund || true) \
+  && (test -x node_modules/.bin/vite || (rm -rf node_modules && npm install --no-audit --no-fund || true)) \
   && test -x node_modules/.bin/vite
 
 COPY . .
