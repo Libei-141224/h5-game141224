@@ -5,7 +5,8 @@ FROM node:20-bookworm-slim AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install \
+RUN npm config set registry https://registry.npmmirror.com \
+  && npm install --no-audit --no-fund \
   && test -x node_modules/.bin/vue-tsc \
   && test -x node_modules/.bin/vite
 
