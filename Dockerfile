@@ -3,7 +3,13 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN set -eux; \
+  npm ci --no-audit --no-fund || true; \
+  if [ ! -x node_modules/.bin/vue-tsc ]; then \
+    rm -rf node_modules; \
+    npm install --no-audit --no-fund; \
+  fi; \
+  test -x node_modules/.bin/vue-tsc
 
 COPY . .
 RUN npm run build
@@ -19,4 +25,3 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD wget -q -O - http://127.0.0.1/healthz >/dev/null 2>&1 || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]
-
