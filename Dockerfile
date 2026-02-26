@@ -2,7 +2,10 @@ FROM docker.m.daocloud.io/library/node:20-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm config set registry https://registry.npmmirror.com \
+  && npm ci --include=dev --no-audit --no-fund \
+  && test -x node_modules/.bin/vue-tsc \
+  && test -x node_modules/.bin/vite
 
 COPY . .
 RUN npm run build
