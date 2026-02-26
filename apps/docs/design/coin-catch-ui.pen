@@ -1,0 +1,1632 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Coin Catch Challenge UI States",
+      "width": 1800,
+      "height": 1040,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#FFF8EE",
+            "position": 0
+          },
+          {
+            "color": "#F5F7FF",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "hHDfR",
+          "x": 56,
+          "y": 36,
+          "name": "canvasTitle",
+          "fill": "#172554",
+          "textGrowth": "fixed-width",
+          "width": 1680,
+          "content": "接金币大挑战 · UI 状态设计",
+          "fontFamily": "Bricolage Grotesque",
+          "fontSize": 28,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "Pj9of",
+          "x": 56,
+          "y": 78,
+          "name": "canvasSubtitle",
+          "fill": "#475569",
+          "textGrowth": "fixed-width",
+          "width": 1680,
+          "content": "基于 PRD：开始页 / 游戏进行页 / 结算侧边栏（桌面优先，中置游戏视口）",
+          "fontFamily": "DM Sans",
+          "fontSize": 14,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "5a3vJ",
+          "x": 56,
+          "y": 116,
+          "name": "startLabel",
+          "fill": "#FB7185",
+          "content": "01 开始页",
+          "fontFamily": "DM Sans",
+          "fontSize": 13,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "EZDSu",
+          "x": 642,
+          "y": 116,
+          "name": "playLabel",
+          "fill": "#2563EB",
+          "content": "02 游戏进行页",
+          "fontFamily": "DM Sans",
+          "fontSize": 13,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "mgRTL",
+          "x": 1228,
+          "y": 116,
+          "name": "endLabel",
+          "fill": "#F97316",
+          "content": "03 结算侧边栏",
+          "fontFamily": "DM Sans",
+          "fontSize": 13,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "9kk97",
+          "x": 56,
+          "y": 144,
+          "name": "State/Start",
+          "clip": true,
+          "width": 540,
+          "height": 840,
+          "fill": "#FFFDF8",
+          "cornerRadius": 28,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E5E7EB"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "NXllR",
+              "x": 0,
+              "y": 0,
+              "name": "startBg",
+              "width": 540,
+              "height": 840,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFF",
+                    "position": 0
+                  },
+                  {
+                    "color": "#FFF7ED",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 28
+            },
+            {
+              "type": "ellipse",
+              "id": "THfoD",
+              "x": 402,
+              "y": -42,
+              "name": "startBlob",
+              "opacity": 0.8,
+              "fill": "#FCE7F3",
+              "width": 180,
+              "height": 180
+            },
+            {
+              "type": "frame",
+              "id": "gHk55",
+              "x": 24,
+              "y": 24,
+              "name": "startTag",
+              "width": 112,
+              "height": 34,
+              "fill": "#FFE7E0",
+              "cornerRadius": 17
+            },
+            {
+              "type": "text",
+              "id": "zq1HK",
+              "x": 42,
+              "y": 33,
+              "name": "startTagTxt",
+              "fill": "#C2410C",
+              "content": "准备开始",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "MV6pv",
+              "x": 406,
+              "y": 24,
+              "name": "bestBadge",
+              "width": 110,
+              "height": 34,
+              "fill": "#EEF2FF",
+              "cornerRadius": 17
+            },
+            {
+              "type": "text",
+              "id": "Sy62b",
+              "x": 420,
+              "y": 33,
+              "name": "bestBadgeTxt",
+              "fill": "#3730A3",
+              "content": "最高分 430",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "H1CQ4",
+              "x": 24,
+              "y": 80,
+              "name": "startTitle",
+              "fill": "#111827",
+              "textGrowth": "fixed-width",
+              "width": 492,
+              "content": "接金币大挑战",
+              "fontFamily": "Bricolage Grotesque",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "fZ777",
+              "x": 24,
+              "y": 124,
+              "name": "startSub",
+              "fill": "#4B5563",
+              "textGrowth": "fixed-width",
+              "width": 492,
+              "content": "60 秒内接住金币，避开炸弹。桌面键盘 ← / → 操作，支持本地最高分。",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "57aL9",
+              "x": 24,
+              "y": 176,
+              "name": "previewShell",
+              "width": 492,
+              "height": 388,
+              "fill": "#F8FAFC",
+              "cornerRadius": 24,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E2E8F0"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "6HFrF",
+              "x": 40,
+              "y": 192,
+              "name": "previewHud",
+              "width": 460,
+              "height": 64,
+              "fill": "#FFFFFF",
+              "cornerRadius": 18,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#EEF2F7"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "C0E4R",
+              "x": 54,
+              "y": 208,
+              "name": "previewScoreCard",
+              "width": 132,
+              "height": 32,
+              "fill": "#ECFEFF",
+              "cornerRadius": 16
+            },
+            {
+              "type": "text",
+              "id": "lXsW4",
+              "x": 69,
+              "y": 217,
+              "name": "previewScoreTxt",
+              "fill": "#0F766E",
+              "content": "Score 000",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "uIPhN",
+              "x": 384,
+              "y": 208,
+              "name": "previewTimerCard",
+              "width": 102,
+              "height": 32,
+              "fill": "#FEF3C7",
+              "cornerRadius": 16
+            },
+            {
+              "type": "text",
+              "id": "ocYCO",
+              "x": 417,
+              "y": 217,
+              "name": "previewTimerTxt",
+              "fill": "#92400E",
+              "content": "60s",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "PDRgM",
+              "x": 40,
+              "y": 264,
+              "name": "previewField",
+              "width": 460,
+              "height": 282,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#DBEAFE",
+                    "position": 0
+                  },
+                  {
+                    "color": "#F0F9FF",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 20
+            },
+            {
+              "type": "ellipse",
+              "id": "E0tlv",
+              "x": 92,
+              "y": 320,
+              "name": "coinSmall",
+              "fill": "#FCD34D",
+              "width": 38,
+              "height": 38,
+              "stroke": {
+                "thickness": 2,
+                "fill": "#F59E0B"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "UKkL6",
+              "x": 336,
+              "y": 348,
+              "name": "coinBig",
+              "fill": "#FBBF24",
+              "width": 54,
+              "height": 54,
+              "stroke": {
+                "thickness": 3,
+                "fill": "#D97706"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "Og3f5",
+              "x": 246,
+              "y": 308,
+              "name": "bombDot",
+              "fill": "#1F2937",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "type": "text",
+              "id": "CMXvC",
+              "x": 263,
+              "y": 316,
+              "name": "bombTxt",
+              "fill": "#FFFFFF",
+              "content": "!",
+              "fontFamily": "DM Sans",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "1JOBL",
+              "x": 192,
+              "y": 510,
+              "name": "playerCatcher",
+              "width": 156,
+              "height": 26,
+              "fill": "#FF6B6B",
+              "cornerRadius": 13
+            },
+            {
+              "type": "frame",
+              "id": "iubal",
+              "x": 352,
+              "y": 518,
+              "name": "keyHint",
+              "width": 132,
+              "height": 22,
+              "fill": "#E2E8F0",
+              "cornerRadius": 11
+            },
+            {
+              "type": "text",
+              "id": "ZxIG2",
+              "x": 366,
+              "y": 522,
+              "name": "keyHintTxt",
+              "fill": "#334155",
+              "content": "← / → 移动",
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "jjY3Q",
+              "x": 24,
+              "y": 588,
+              "name": "startBtn",
+              "width": 492,
+              "height": 58,
+              "fill": "#FF6B6B",
+              "cornerRadius": 18
+            },
+            {
+              "type": "text",
+              "id": "sd2dZ",
+              "x": 224,
+              "y": 607,
+              "name": "startBtnTxt",
+              "fill": "#FFFFFF",
+              "content": "开始游戏",
+              "fontFamily": "DM Sans",
+              "fontSize": 16,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "xTaJU",
+              "x": 24,
+              "y": 658,
+              "name": "rulesBtn",
+              "width": 492,
+              "height": 48,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "575Ld",
+              "x": 222,
+              "y": 674,
+              "name": "rulesBtnTxt",
+              "fill": "#111827",
+              "content": "玩法说明",
+              "fontFamily": "DM Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "WawPA",
+              "x": 24,
+              "y": 722,
+              "name": "ruleCard",
+              "width": 492,
+              "height": 94,
+              "fill": "#FFF7ED",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FED7AA"
+              }
+            },
+            {
+              "type": "text",
+              "id": "Qu7Lr",
+              "x": 40,
+              "y": 738,
+              "name": "ruleTitle",
+              "fill": "#9A3412",
+              "content": "玩法要点",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "Z3tQT",
+              "x": 40,
+              "y": 760,
+              "name": "ruleBody",
+              "fill": "#7C2D12",
+              "textGrowth": "fixed-width",
+              "width": 460,
+              "content": "• 金币 +10， 大金币 +30\n• 接到炸弹立即结束\n• 60 秒倒计时结束自动结算",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "amF3A",
+          "x": 642,
+          "y": 144,
+          "name": "State/Playing",
+          "clip": true,
+          "width": 540,
+          "height": 840,
+          "fill": "#F8FBFF",
+          "cornerRadius": 28,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E5E7EB"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "2ckyx",
+              "x": 0,
+              "y": 0,
+              "name": "playBg",
+              "width": 540,
+              "height": 840,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFF",
+                    "position": 0
+                  },
+                  {
+                    "color": "#EFF6FF",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 28
+            },
+            {
+              "type": "frame",
+              "id": "skY46",
+              "x": 16,
+              "y": 18,
+              "name": "playingTag",
+              "width": 88,
+              "height": 32,
+              "fill": "#DBEAFE",
+              "cornerRadius": 16
+            },
+            {
+              "type": "text",
+              "id": "BkJGK",
+              "x": 34,
+              "y": 27,
+              "name": "playingTagTxt",
+              "fill": "#1D4ED8",
+              "content": "进行中",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "HYnPj",
+              "x": 411,
+              "y": 18,
+              "name": "desktopTag",
+              "width": 113,
+              "height": 32,
+              "fill": "#ECFEFF",
+              "cornerRadius": 16
+            },
+            {
+              "type": "text",
+              "id": "6cOiL",
+              "x": 427,
+              "y": 27,
+              "name": "desktopTagTxt",
+              "fill": "#0F766E",
+              "content": "Desktop 优先",
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "qqEMJ",
+              "x": 16,
+              "y": 66,
+              "name": "gameCard",
+              "width": 356,
+              "height": 758,
+              "fill": "#FFFFFF",
+              "cornerRadius": 22,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "FEEnA",
+              "x": 28,
+              "y": 78,
+              "name": "gameHud",
+              "width": 332,
+              "height": 58,
+              "fill": "#F8FAFC",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#EEF2F7"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "69tcD",
+              "x": 40,
+              "y": 92,
+              "name": "scoreChip",
+              "width": 126,
+              "height": 30,
+              "fill": "#ECFEFF",
+              "cornerRadius": 15
+            },
+            {
+              "type": "text",
+              "id": "gSik2",
+              "x": 54,
+              "y": 100,
+              "name": "scoreChipTxt",
+              "fill": "#0F766E",
+              "content": "分数 0120",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "jisk2",
+              "x": 224,
+              "y": 92,
+              "name": "timeChip",
+              "width": 124,
+              "height": 30,
+              "fill": "#FEF3C7",
+              "cornerRadius": 15
+            },
+            {
+              "type": "text",
+              "id": "hb0vf",
+              "x": 239,
+              "y": 100,
+              "name": "timeChipTxt",
+              "fill": "#92400E",
+              "content": "剩余 38s",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "dFIlf",
+              "x": 28,
+              "y": 148,
+              "name": "field",
+              "width": 332,
+              "height": 566,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#DCEEFF",
+                    "position": 0
+                  },
+                  {
+                    "color": "#F0F9FF",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 18
+            },
+            {
+              "type": "ellipse",
+              "id": "4qbup",
+              "x": 76,
+              "y": 206,
+              "name": "coinA",
+              "fill": "#FCD34D",
+              "width": 26,
+              "height": 26,
+              "stroke": {
+                "thickness": 2,
+                "fill": "#F59E0B"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "UKL4c",
+              "x": 196,
+              "y": 286,
+              "name": "coinB",
+              "fill": "#FBBF24",
+              "width": 34,
+              "height": 34,
+              "stroke": {
+                "thickness": 2,
+                "fill": "#D97706"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "oVhoi",
+              "x": 304,
+              "y": 236,
+              "name": "coinC",
+              "fill": "#FDE68A",
+              "width": 22,
+              "height": 22,
+              "stroke": {
+                "thickness": 2,
+                "fill": "#F59E0B"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "IAmsZ",
+              "x": 122,
+              "y": 382,
+              "name": "bigCoin",
+              "fill": "#FBBF24",
+              "width": 42,
+              "height": 42,
+              "stroke": {
+                "thickness": 3,
+                "fill": "#D97706"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "1quoj",
+              "x": 256,
+              "y": 432,
+              "name": "bombBall",
+              "fill": "#111827",
+              "width": 36,
+              "height": 36
+            },
+            {
+              "type": "text",
+              "id": "c5tX3",
+              "x": 269,
+              "y": 438,
+              "name": "bombBallTxt",
+              "fill": "#FFFFFF",
+              "content": "!",
+              "fontFamily": "DM Sans",
+              "fontSize": 18,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "d0Wqp",
+              "x": 132,
+              "y": 674,
+              "name": "playerBar",
+              "width": 124,
+              "height": 22,
+              "fill": "#FF6B6B",
+              "cornerRadius": 11
+            },
+            {
+              "type": "frame",
+              "id": "iyC4Y",
+              "x": 42,
+              "y": 698,
+              "name": "floorBar",
+              "width": 304,
+              "height": 8,
+              "fill": "#BFDBFE",
+              "cornerRadius": 4
+            },
+            {
+              "type": "frame",
+              "id": "IuCVG",
+              "x": 28,
+              "y": 724,
+              "name": "kbdBar",
+              "width": 332,
+              "height": 88,
+              "fill": "#F8FAFC",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#EEF2F7"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "KuAo3",
+              "x": 44,
+              "y": 748,
+              "name": "leftKey",
+              "width": 66,
+              "height": 40,
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "sMRei",
+              "x": 70,
+              "y": 759,
+              "name": "leftKeyTxt",
+              "fill": "#334155",
+              "content": "←",
+              "fontFamily": "DM Sans",
+              "fontSize": 16,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "A5kDA",
+              "x": 120,
+              "y": 748,
+              "name": "rightKey",
+              "width": 66,
+              "height": 40,
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "EM6qd",
+              "x": 146,
+              "y": 759,
+              "name": "rightKeyTxt",
+              "fill": "#334155",
+              "content": "→",
+              "fontFamily": "DM Sans",
+              "fontSize": 16,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "sUfhB",
+              "x": 206,
+              "y": 760,
+              "name": "holdHintTxt",
+              "fill": "#64748B",
+              "content": "长按连续移动，松开停止",
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "K75sC",
+              "x": 384,
+              "y": 66,
+              "name": "sidePanel",
+              "width": 140,
+              "height": 758,
+              "fill": "#F8FAFC",
+              "cornerRadius": 22,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "CRL6F",
+              "x": 401,
+              "y": 86,
+              "name": "sideTitle",
+              "fill": "#0F172A",
+              "content": "回合信息",
+              "fontFamily": "DM Sans",
+              "fontSize": 14,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "xPQBp",
+              "x": 396,
+              "y": 118,
+              "name": "runCard",
+              "width": 116,
+              "height": 112,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "EkZSB",
+              "x": 408,
+              "y": 134,
+              "name": "runCardTitle",
+              "fill": "#1E293B",
+              "content": "实时状态",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "lLY4P",
+              "x": 408,
+              "y": 156,
+              "name": "runCardBody",
+              "fill": "#475569",
+              "textGrowth": "fixed-width",
+              "width": 92,
+              "content": "状态: playing\n掉落间隔: 600ms\n同屏上限: 12",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "pqr6l",
+              "x": 396,
+              "y": 242,
+              "name": "weightsCard",
+              "width": 116,
+              "height": 118,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "ZXAsH",
+              "x": 408,
+              "y": 258,
+              "name": "weightsTitle",
+              "fill": "#1E293B",
+              "content": "掉落权重",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "dHqfQ",
+              "x": 408,
+              "y": 280,
+              "name": "weightsBody",
+              "fill": "#475569",
+              "textGrowth": "fixed-width",
+              "width": 92,
+              "content": "COIN 80%\nBIG 10%\nBOMB 10%",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "elXdC",
+              "x": 396,
+              "y": 372,
+              "name": "legendCard",
+              "width": 116,
+              "height": 174,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "Bhobw",
+              "x": 408,
+              "y": 388,
+              "name": "legendTitle",
+              "fill": "#1E293B",
+              "content": "图例",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "heKkM",
+              "x": 408,
+              "y": 412,
+              "name": "legendBody",
+              "fill": "#475569",
+              "textGrowth": "fixed-width",
+              "width": 92,
+              "content": "金币 +10\n大金币 +30\n炸弹 立即结束",
+              "lineHeight": 1.55,
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "qdgzt",
+              "x": 396,
+              "y": 558,
+              "name": "warnCard",
+              "width": 116,
+              "height": 110,
+              "fill": "#FFF7ED",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FED7AA"
+              }
+            },
+            {
+              "type": "text",
+              "id": "SLP7f",
+              "x": 408,
+              "y": 574,
+              "name": "warnTxt",
+              "fill": "#9A3412",
+              "textGrowth": "fixed-width",
+              "width": 92,
+              "content": "注意：接到炸弹会立即结束当前回合，并打开结算侧栏。",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oDMKr",
+          "x": 1228,
+          "y": 144,
+          "name": "State/Ended",
+          "clip": true,
+          "width": 540,
+          "height": 840,
+          "fill": "#FFFBF6",
+          "cornerRadius": 28,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#E5E7EB"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "1CkOZ",
+              "x": 0,
+              "y": 0,
+              "name": "endBg",
+              "width": 540,
+              "height": 840,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#FFFFFF",
+                    "position": 0
+                  },
+                  {
+                    "color": "#FFF7ED",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 28
+            },
+            {
+              "type": "ellipse",
+              "id": "e1WJ8",
+              "x": 386,
+              "y": -36,
+              "name": "endBlob",
+              "opacity": 0.9,
+              "fill": "#FFEDD5",
+              "width": 170,
+              "height": 170
+            },
+            {
+              "type": "frame",
+              "id": "vbpr6",
+              "x": 16,
+              "y": 18,
+              "name": "endedTag",
+              "width": 82,
+              "height": 32,
+              "fill": "#FFE4E6",
+              "cornerRadius": 16
+            },
+            {
+              "type": "text",
+              "id": "neyjt",
+              "x": 34,
+              "y": 27,
+              "name": "endedTagTxt",
+              "fill": "#BE123C",
+              "content": "已结束",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "zLAA5",
+              "x": 409,
+              "y": 18,
+              "name": "reasonTag",
+              "width": 115,
+              "height": 32,
+              "fill": "#FEF3C7",
+              "cornerRadius": 16
+            },
+            {
+              "type": "text",
+              "id": "8CiEM",
+              "x": 425,
+              "y": 27,
+              "name": "reasonTagTxt",
+              "fill": "#92400E",
+              "content": "炸弹命中",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "uoGHt",
+              "x": 16,
+              "y": 66,
+              "name": "frozenCard",
+              "width": 336,
+              "height": 758,
+              "fill": "#FFFFFF",
+              "cornerRadius": 22,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "5s43n",
+              "x": 28,
+              "y": 78,
+              "name": "frozenHud",
+              "width": 312,
+              "height": 58,
+              "fill": "#F8FAFC",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#EEF2F7"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "kxkHC",
+              "x": 40,
+              "y": 92,
+              "name": "frozenScoreChip",
+              "width": 118,
+              "height": 30,
+              "fill": "#ECFEFF",
+              "cornerRadius": 15
+            },
+            {
+              "type": "text",
+              "id": "Syvb6",
+              "x": 53,
+              "y": 100,
+              "name": "frozenScoreTxt",
+              "fill": "#0F766E",
+              "content": "分数 0190",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "NwhMA",
+              "x": 218,
+              "y": 92,
+              "name": "frozenTimeChip",
+              "width": 110,
+              "height": 30,
+              "fill": "#FEE2E2",
+              "cornerRadius": 15
+            },
+            {
+              "type": "text",
+              "id": "yrQrh",
+              "x": 232,
+              "y": 100,
+              "name": "frozenTimeTxt",
+              "fill": "#991B1B",
+              "content": "终止 12s",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "jYM9W",
+              "x": 28,
+              "y": 148,
+              "name": "frozenField",
+              "width": 312,
+              "height": 566,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 180,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#E2E8F0",
+                    "position": 0
+                  },
+                  {
+                    "color": "#F8FAFC",
+                    "position": 1
+                  }
+                ]
+              },
+              "cornerRadius": 18
+            },
+            {
+              "type": "ellipse",
+              "id": "Me7zl",
+              "x": 88,
+              "y": 254,
+              "name": "endCoin",
+              "fill": "#FCD34D",
+              "width": 28,
+              "height": 28,
+              "stroke": {
+                "thickness": 2,
+                "fill": "#F59E0B"
+              }
+            },
+            {
+              "type": "ellipse",
+              "id": "4Gojf",
+              "x": 206,
+              "y": 448,
+              "name": "endBomb",
+              "fill": "#111827",
+              "width": 40,
+              "height": 40
+            },
+            {
+              "type": "text",
+              "id": "jOttw",
+              "x": 221,
+              "y": 456,
+              "name": "endBombTxt",
+              "fill": "#FFFFFF",
+              "content": "!",
+              "fontFamily": "DM Sans",
+              "fontSize": 18,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "4mIRk",
+              "x": 122,
+              "y": 674,
+              "name": "endPlayer",
+              "width": 124,
+              "height": 22,
+              "fill": "#FF6B6B",
+              "cornerRadius": 11
+            },
+            {
+              "type": "frame",
+              "id": "j7RqO",
+              "x": 28,
+              "y": 148,
+              "name": "flashOverlay",
+              "opacity": 0.12,
+              "width": 312,
+              "height": 566,
+              "fill": "#EF4444",
+              "cornerRadius": 18
+            },
+            {
+              "type": "frame",
+              "id": "qzBxU",
+              "x": 28,
+              "y": 148,
+              "name": "dimOverlay",
+              "opacity": 0.24,
+              "width": 312,
+              "height": 566,
+              "fill": "#0F172A",
+              "cornerRadius": 18
+            },
+            {
+              "type": "frame",
+              "id": "kQr5U",
+              "x": 128,
+              "y": 406,
+              "name": "boomBadge",
+              "width": 112,
+              "height": 38,
+              "fill": "#FF6B6B",
+              "cornerRadius": 19
+            },
+            {
+              "type": "text",
+              "id": "hAeOv",
+              "x": 159,
+              "y": 418,
+              "name": "boomBadgeTxt",
+              "fill": "#FFFFFF",
+              "content": "BOOM!",
+              "fontFamily": "Bricolage Grotesque",
+              "fontSize": 15,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "ENoOF",
+              "x": 364,
+              "y": 66,
+              "name": "settlePanel",
+              "width": 160,
+              "height": 758,
+              "fill": "#FFFFFF",
+              "cornerRadius": 22,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "P0O5o",
+              "x": 380,
+              "y": 90,
+              "name": "panelTitle",
+              "fill": "#0F172A",
+              "content": "结算结果",
+              "fontFamily": "Bricolage Grotesque",
+              "fontSize": 18,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "1BfF5",
+              "x": 380,
+              "y": 116,
+              "name": "panelSub",
+              "fill": "#64748B",
+              "textGrowth": "fixed-width",
+              "width": 128,
+              "content": "显示本局得分、历史最高分与再玩一次入口",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "9G5xw",
+              "x": 376,
+              "y": 160,
+              "name": "scoreCard",
+              "width": 136,
+              "height": 118,
+              "fill": "#FFF7ED",
+              "cornerRadius": 18,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FED7AA"
+              }
+            },
+            {
+              "type": "text",
+              "id": "meAUD",
+              "x": 390,
+              "y": 178,
+              "name": "scoreLabel",
+              "fill": "#9A3412",
+              "content": "本局得分",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "350P0",
+              "x": 390,
+              "y": 206,
+              "name": "scoreValue",
+              "fill": "#C2410C",
+              "content": "190",
+              "fontFamily": "Bricolage Grotesque",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "SvyNk",
+              "x": 376,
+              "y": 292,
+              "name": "bestCard",
+              "width": 136,
+              "height": 92,
+              "fill": "#F8FAFC",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "Bt4cn",
+              "x": 390,
+              "y": 308,
+              "name": "bestLabel",
+              "fill": "#334155",
+              "content": "历史最高分",
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "UivZ1",
+              "x": 390,
+              "y": 331,
+              "name": "bestValue",
+              "fill": "#0F172A",
+              "content": "190",
+              "fontFamily": "Bricolage Grotesque",
+              "fontSize": 22,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "WhpIt",
+              "x": 376,
+              "y": 396,
+              "name": "recordBadge",
+              "width": 136,
+              "height": 34,
+              "fill": "#DCFCE7",
+              "cornerRadius": 17
+            },
+            {
+              "type": "text",
+              "id": "Qe6zn",
+              "x": 397,
+              "y": 407,
+              "name": "recordBadgeTxt",
+              "fill": "#166534",
+              "content": "新纪录 + 已保存",
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "qpfZJ",
+              "x": 376,
+              "y": 444,
+              "name": "reasonCard2",
+              "width": 136,
+              "height": 104,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "lEXKZ",
+              "x": 390,
+              "y": 460,
+              "name": "reasonTitle2",
+              "fill": "#1E293B",
+              "content": "结束原因",
+              "fontFamily": "DM Sans",
+              "fontSize": 11,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "6xcFj",
+              "x": 390,
+              "y": 482,
+              "name": "reasonBody2",
+              "fill": "#475569",
+              "textGrowth": "fixed-width",
+              "width": 108,
+              "content": "命中炸弹，游戏立即结束。\n计时与掉落更新停止，保留最终状态。",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 10,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "4w3pU",
+              "x": 376,
+              "y": 566,
+              "name": "replayBtn",
+              "width": 136,
+              "height": 48,
+              "fill": "#FF6B6B",
+              "cornerRadius": 15
+            },
+            {
+              "type": "text",
+              "id": "soSct",
+              "x": 416,
+              "y": 582,
+              "name": "replayBtnTxt",
+              "fill": "#FFFFFF",
+              "content": "再玩一次",
+              "fontFamily": "DM Sans",
+              "fontSize": 13,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "ROcm7",
+              "x": 376,
+              "y": 624,
+              "name": "homeBtn",
+              "width": 136,
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 14,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              }
+            },
+            {
+              "type": "text",
+              "id": "MTETq",
+              "x": 403,
+              "y": 639,
+              "name": "homeBtnTxt",
+              "fill": "#1F2937",
+              "content": "返回开始页",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "0K0dM",
+              "x": 380,
+              "y": 686,
+              "name": "panelHint",
+              "fill": "#64748B",
+              "textGrowth": "fixed-width",
+              "width": 128,
+              "content": "侧边栏可在 time_up 或 bomb 两种结束状态下复用。",
+              "lineHeight": 1.45,
+              "fontFamily": "DM Sans",
+              "fontSize": 10,
+              "fontWeight": "600"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
