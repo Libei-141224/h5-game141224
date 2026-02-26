@@ -1,28 +1,15 @@
-FROM node:20-alpine AS build
-
+FROM docker.m.daocloud.io/library/node:20-alpine AS builder
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN set -eux; \
-  npm ci --no-audit --no-fund || true; \
-  if [ ! -x node_modules/.bin/vue-tsc ]; then \
-    rm -rf node_modules; \
-    npm install --no-audit --no-fund; \
-  fi; \
-  test -x node_modules/.bin/vue-tsc
+COPY package*.json ./
+RUN npm ci
 
 COPY . .
 RUN npm run build
 
-FROM node:20-alpine AS runtime
-
-WORKDIR /app
-RUN npm install -g serve@14 --no-audit --no-fund
-COPY --from=build /app/dist ./dist
+FROM docker.m.daocloud.io/library/nginx:1.27-alpine AS runner
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD wget -q -O - http://127.0.0.1/ >/dev/null 2>&1 || exit 1
-
-CMD ["serve", "-s", "dist", "-l", "80"]
+CMD ["nginx", "-g", "daemon off;"]
