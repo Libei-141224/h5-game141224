@@ -5,7 +5,9 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm install \
+  && test -x node_modules/.bin/vue-tsc \
+  && test -x node_modules/.bin/vite
 
 COPY . .
 
