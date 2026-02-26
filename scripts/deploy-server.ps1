@@ -70,11 +70,15 @@ git -C "$APP_DIR" checkout "$BRANCH"
 git -C "$APP_DIR" pull --ff-only origin "$BRANCH"
 
 cd "$APP_DIR"
+if [ ! -f "$APP_DIR/docker-compose.yml" ]; then
+  echo "ERROR: docker-compose.yml not found in $APP_DIR"
+  exit 1
+fi
 echo "==> Docker deploy"
-docker compose -f deploy/docker-compose.prod.yml up -d --build
+docker compose -f docker-compose.yml up -d --build
 
 echo "==> Container status"
-docker compose -f deploy/docker-compose.prod.yml ps
+docker compose -f docker-compose.yml ps
 
 echo "==> Health check"
 curl -fsS http://127.0.0.1:11019/healthz

@@ -1,0 +1,10 @@
+.git
+.github
+.cursor
+node_modules
+dist
+npm-debug.log*
+*.log
+tsconfig.tsbuildinfo
+tsconfig.node.tsbuildinfo
+

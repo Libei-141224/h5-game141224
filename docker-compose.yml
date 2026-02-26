@@ -1,0 +1,16 @@
+services:
+  web:
+    container_name: h5-game141224
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "11019:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1/healthz >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+

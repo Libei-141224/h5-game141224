@@ -18,13 +18,14 @@ npm run dev
 Build and run with Docker:
 
 ```bash
-
+docker build -t h5-game141224 .
+docker run -d --name h5-game141224 -p 11019:80 h5-game141224
 ```
 
 Or use Docker Compose:
 
 ```bash
-
+docker compose up -d --build
 ```
 
 Then open:
