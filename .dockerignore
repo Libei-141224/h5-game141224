@@ -1,0 +1,15 @@
+.git
+.github
+.cursor
+node_modules
+dist
+coverage
+.cache
+.temp
+temp
+*.log
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+apps/docs
+README.md

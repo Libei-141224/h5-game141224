@@ -1,0 +1,18 @@
+services:
+  h5-game-web:
+    container_name: h5-game-web
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      args:
+        VITE_BASE: /
+    image: h5-game:prod
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
