@@ -12,4 +12,3 @@ temp
 vite.config.js
 vite.config.d.ts
 apps/docs
-README.md
