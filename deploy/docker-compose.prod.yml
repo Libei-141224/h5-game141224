@@ -8,7 +8,7 @@ services:
         VITE_BASE: /
     image: h5-game:prod
     ports:
-      - "80:80"
+      - "11019:80"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/healthz"]
